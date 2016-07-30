@@ -2,22 +2,33 @@
 <!-- Intro Start -->
 
 <header class="intro">
-  <div class="intro-body">
-    <div class="container">
-      <div class="row">
-          <div class="col-md-10 col-md-offset-1">
-            <h1 class="brand-heading">&nbsp;</h1>
-            <h1 class="brand-heading">&nbsp;</h1>
-            <span class="intro-text">{{ content }}</span>
-            <h5>&nbsp;</h5>
-            <a href="#aboutme" class="page-scroll">
-              <img class="img-me" src="{{site.baseurl}}{{ site.me-img }}" alt="">
-            </a>
+  <!-- <section id="header-slider-wrapper">
+    <div id="header-slider" class="slider">
+      <div class="intro" style="background-image: url(http://www.nicolaspettican.com/img/background.jpg) no-repeat bottom center scroll #666666;"></div>
+      <div class="intro" style="background-image: url(https://petticanjunction.github.io/img/intro-bg.jpg) no-repeat bottom center scroll #666666;"></div> -->
+    <div id="containerdrag" class="panel-main">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <h1 class="brand-heading">&nbsp;</h1>
+                <div id="draggable">
+                  <a href="#aboutme" class="page-scroll">
+                    <img class="img-me" src="{{site.baseurl}}{{ site.me-img }}" alt="">
+                  </a>
+                </div>
+                <h5>&nbsp;</h5>
+                <hr class="panel-cover__divider">
+                <h5>&nbsp;</h5>
+                <span class="intro-text">{{ content }}</span>
+                <h5>&nbsp;</h5>
+              </div>
+            </div>
           </div>
         </div>
-    </div>
-    <div class="panel-cover--overlay"></div>
-  </div>
+      </div>
+    <!-- </div>
+  </section> -->
 </header>
 
 <!-- Intro End -->

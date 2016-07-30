@@ -13,20 +13,56 @@
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+<!-- Slick Slider -->
+<script   src="https://code.jquery.com/jquery-migrate-3.0.0.min.js"   integrity="sha256-JklDYODbg0X+8sPiKkcFURb5z7RvlNMIaE3RA2z97vw="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+
 <!-- Custom Theme JavaScript -->
 <!--* Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
 * Code licensed under the Apache License v2.0.
 * For details, see http://www.apache.org/licenses/LICENSE-2.0.-->
 
+<script>
+$(".slider").slick({
+
+    autoplay: true,
+    dots: true,
+    autoplaySpeed: 8000,
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 500,
+        settings: {
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 2
+        }
+    }]
+});
+
+$(function(){
+  $('.fade').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+});
+</script>
+
 <!-- Draggable -->
 <style>
-  	#draggable { width: 1000px; height: 600px; padding: 0.5em; background-color: #fff; }
+  	#draggable { width: auto; height: auto; padding: 0.5em; background-color: transparent; }
 </style>
 <script>
 	$(function() {
-		$( "#draggable" ).draggable({containment: "#containertree"});
+		$( "#draggable" ).draggable({containment: "#containerdrag"});
 	});
 </script>
+
+
 
 <script>
 function toggleNavCollapse(){50<$(".navbar").offset().top?$(".navbar-fixed-top").addClass("top-nav-collapse"):$(".navbar-fixed-top").removeClass("top-nav-collapse");}
